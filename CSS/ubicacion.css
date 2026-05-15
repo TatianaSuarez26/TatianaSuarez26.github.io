@@ -1,0 +1,155 @@
+/* CONTENIDO PRINCIPAL*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    flex: 1;
+    gap: 30px;
+}
+
+/* TÍTULO DE LA SECCIÓN */
+main h2 {
+    font-size: 36px;
+    color: #be185d;
+    text-align: center;
+}
+
+/* FILA PRINCIPAL: MAPA A LA IZQUIERDA, DIRECCIONES A LA DERECHA
+   Uso flexbox con wrap para que en móvil se apilen automáticamente */
+.contenido-ubicacion {
+    display: flex;
+    gap: 36px;
+    width: 100%;
+    max-width: 1100px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* CONTENEDOR DEL MAPA */
+.mapa-contenedor {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* MAPA DE GOOGLE*/
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 460px;
+    border: none;
+    display: block;
+}
+
+/* PANEL DE INFORMACIÓN
+   Columna con las tarjetas de dirección y domicilio */
+.info-ubicacion {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* TÍTULO DEL PANEL DE SEDES */
+.info-ubicacion h3 {
+    font-size: 22px;
+    color: #be185d;
+    margin-bottom: 4px;
+}
+
+/* TARJETA DE CADA DIRECCIÓN */
+.direccion {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: #fce7f3;
+    border-radius: 14px;
+    padding: 14px 18px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* EMOJI DE CASITA EN CADA DIRECCIÓN*/
+.direccion span {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+/* NOMBRE DE LA SEDE EN NEGRITA */
+.nombre-sede {
+    font-weight: bold;
+    color: #be185d;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+/* DIRECCIÓN DE LA SEDE */
+.direccion p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* TARJETA DE ATENCIÓN A DOMICILIO*/
+.domicilio {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: #fff0f5;
+    border: 2px solid #f9a8d4;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-top: 6px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* EMOJI DE MOTO EN LA TARJETA DE DOMICILIO */
+.domicilio span {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+/* TEXTO DE LA TARJETA DE DOMICILIO */
+.domicilio p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE - PANTALLAS PEQUEÑAS
+   En móvil apilo el mapa y las direcciones en columna */
+@media (max-width: 768px) {
+
+    main {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    main h2 {
+        font-size: 28px;
+    }
+
+    /* El mapa y el panel pasan a estar uno debajo del otro */
+    .contenido-ubicacion {
+        flex-direction: column;
+    }
+
+    /* El mapa ocupa todo el ancho */
+    .mapa-contenedor {
+        width: 100%;
+        min-width: unset;
+    }
+
+    /* Reduzco la altura del mapa en móvil para no ocupar toda la pantalla */
+    .mapa-contenedor iframe {
+        height: 280px;
+    }
+
+    /* El panel de direcciones ocupa todo el ancho */
+    .info-ubicacion {
+        width: 100%;
+        min-width: unset;
+    }
+}

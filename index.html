@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Declaro el idioma español para que el navegador y los lectores de pantalla lo interpreten correctamente -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Hago que la página se vea bien en dispositivos móviles ajustando el ancho al tamaño de la pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrodita Nails - Inicio</title>
+
+    <!-- FUENTE Y ESTILOS -->
+    <!-- Importo la fuente Playfair Display desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Estilos generales compartidos por todas las páginas -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Estilos del widget de accesibilidad -->
+    <link rel="stylesheet" href="CSS/accesibilidad.css">
+</head>
+
+<body>
+
+    <!-- ENLACE DE SALTO -->
+    <!-- Permite a usuarios de teclado saltar directo al contenido, sin pasar por el menú -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- ENCABEZADO -->
+    <!-- Contiene el logo, el nombre del spa y la barra de navegación -->
+    <header>
+
+        <!-- LOGO Y NOMBRE -->
+        <div class="header-top">
+            <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
+            <h1>Afrodita Nails</h1>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <!-- aria-label le indica a los lectores de pantalla que este es el menú principal -->
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- id="contenido-principal" es el destino del enlace de salto -->
+    <main id="contenido-principal">
+
+        <!-- TEXTO DE BIENVENIDA -->
+        <div class="texto-bienvenida">
+            <h2>Bienvenidos a Afrodita Nails</h2>
+            <p>En Afrodita Nails creemos que el cuidado personal es una forma de expresión,
+            por eso trabajamos con dedicación, creatividad y compromiso para garantizar
+            resultados que superen las expectativas. Visítanos y déjate mimar por nuestras
+            expertas. Tu belleza es nuestra pasión.</p>
+            <!-- Botón que lleva directamente a la página de reservas -->
+            <a href="reserva.html" class="btn-reservar">Reservar cita</a>
+        </div>
+
+        <!-- CARRUSEL DE IMÁGENES -->
+        <!-- aria-label describe la galería para lectores de pantalla -->
+        <div class="carrusel" aria-label="Galería de imágenes de referencia">
+            <!-- Imagen activa: el JS la reemplaza al cambiar de foto -->
+            <img id="foto-activa" src="IMG/ImgCarrusel_01.jpg" alt="Diseño de uñas de Afrodita Nails">
+
+            <!-- BOTONES DEL CARRUSEL -->
+            <!-- Cada botón llama a cambiarFoto() con -1 (atrás) o 1 (adelante) -->
+            <div class="botones-carrusel">
+                <button onclick="cambiarFoto(-1)" aria-label="Imagen anterior">❮</button>
+                <button onclick="cambiarFoto(1)" aria-label="Imagen siguiente">❯</button>
+            </div>
+
+            <!-- aria-hidden="true" oculta este texto decorativo a los lectores de pantalla -->
+            <p aria-hidden="true">Imágenes de Referencia</p>
+        </div>
+
+    </main>
+
+    <!-- WIDGET DE ACCESIBILIDAD -->
+    <!-- Panel que el usuario puede abrir y cerrar para activar opciones de accesibilidad -->
+    <div class="accesibilidad-widget">
+        <!-- Panel oculto por defecto con las tres opciones -->
+        <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
+            <p class="panel-titulo">Accesibilidad</p>
+            <button class="opcion-acc" id="btn-contraste" aria-pressed="false">🔆 Alto contraste</button>
+            <button class="opcion-acc" id="btn-fuente"    aria-pressed="false">🔤 Texto más grande</button>
+            <button class="opcion-acc" id="btn-enlaces"   aria-pressed="false">🔗 Subrayar enlaces</button>
+        </div>
+        <!-- Botón ♿ que abre y cierra el panel -->
+        <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
+    </div>
+
+    <!-- BOTONES FLOTANTES DE REDES SOCIALES -->
+    <!-- Fijos en la esquina inferior derecha, visibles en todo momento -->
+    <div class="botones-flotantes" aria-label="Redes sociales">
+        <a href="https://wa.me/573000000000" target="_blank" aria-label="Contáctanos por WhatsApp (abre en nueva pestaña)" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Síguenos en Instagram (abre en nueva pestaña)" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="">
+        </a>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/accesibilidad.js"></script>
+
+</body>
+</html>

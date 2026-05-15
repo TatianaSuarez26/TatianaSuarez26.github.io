@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- Declaro el idioma español para navegadores y lectores de pantalla -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Hago que la página sea responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrodita Nails - Contacto</title>
+
+    <!-- FUENTE Y ESTILOS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Estilos generales compartidos por todas las páginas -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Estilos específicos del formulario y confirmación de contacto -->
+    <link rel="stylesheet" href="CSS/contacto.css">
+    <!-- Estilos del widget de accesibilidad -->
+    <link rel="stylesheet" href="CSS/accesibilidad.css">
+</head>
+
+<body>
+
+    <!-- ENLACE DE SALTO -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <!-- LOGO Y NOMBRE -->
+        <div class="header-top">
+            <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
+            <h1>Afrodita Nails</h1>
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido-principal">
+        <h2>Contáctanos</h2>
+        <!-- Texto descriptivo debajo del título -->
+        <p class="subtitulo">¿Tienes alguna pregunta? ¡Escríbenos y te respondemos pronto!</p>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <!-- novalidate desactiva la validación nativa, la manejo desde contacto.js -->
+        <form id="form-contacto" aria-label="Formulario de contacto" novalidate>
+
+            <!-- CAMPO NOMBRE -->
+            <!-- autocomplete="name" sugiere el nombre guardado en el navegador -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre completo" autocomplete="name" aria-required="true" required>
+
+            <!-- CAMPO CORREO -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" placeholder="tucorreo@email.com" autocomplete="email" aria-required="true" required>
+
+            <!-- CAMPO MENSAJE -->
+            <!-- Uso textarea para mensajes largos con posibilidad de redimensionar verticalmente -->
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" aria-required="true" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <!-- CONFIRMACIÓN DE MENSAJE ENVIADO -->
+        <!-- Oculto por defecto; el JS lo muestra al enviar el formulario -->
+        <!-- role="alert" y aria-live="polite" hacen que el lector de pantalla lo anuncie automáticamente -->
+        <div id="confirmacion-contacto" class="confirmacion-contacto" style="display:none;" role="alert" aria-live="polite">
+            <!-- aria-hidden="true" oculta el emoji decorativo a los lectores de pantalla -->
+            <div class="icono-confirmacion" aria-hidden="true">💌</div>
+            <h3>¡Mensaje recibido!</h3>
+            <!-- El JS inserta el nombre del usuario dentro del span -->
+            <p>Gracias <span id="nombre-contacto"></span>, tu mensaje ha sido recibido.<br>Te responderemos lo más pronto posible.</p>
+            <a href="index.html" class="btn-volver-contacto">Volver al inicio</a>
+        </div>
+
+        <!-- CONTACTO ALTERNATIVO -->
+        <!-- Botones directos a WhatsApp e Instagram para quienes prefieran ese canal -->
+        <div class="contacto-alterno">
+            <p>O si prefieres, contáctanos directamente por:</p>
+            <div class="iconos-contacto">
+                <!-- rel="noopener" mejora la seguridad al abrir en nueva pestaña -->
+                <a href="https://wa.me/573000000000" target="_blank" rel="noopener" class="btn-whatsapp" aria-label="Contáctanos por WhatsApp (abre en nueva pestaña)">
+                    <!-- alt="" porque el texto del enlace ya describe el destino -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" aria-hidden="true">
+                    WhatsApp
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-instagram" aria-label="Síguenos en Instagram (abre en nueva pestaña)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="" aria-hidden="true">
+                    Instagram
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- WIDGET DE ACCESIBILIDAD -->
+    <div class="accesibilidad-widget">
+        <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
+            <p class="panel-titulo">Accesibilidad</p>
+            <button class="opcion-acc" id="btn-contraste" aria-pressed="false">🔆 Alto contraste</button>
+            <button class="opcion-acc" id="btn-fuente"    aria-pressed="false">🔤 Texto más grande</button>
+            <button class="opcion-acc" id="btn-enlaces"   aria-pressed="false">🔗 Subrayar enlaces</button>
+        </div>
+        <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
+    </div>
+
+    <!-- BOTONES FLOTANTES DE REDES SOCIALES -->
+    <div class="botones-flotantes" aria-label="Redes sociales">
+        <a href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="Contáctanos por WhatsApp (abre en nueva pestaña)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Síguenos en Instagram (abre en nueva pestaña)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="">
+        </a>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- contacto.js maneja el envío del formulario y muestra la confirmación -->
+    <script src="JS/contacto.js"></script>
+    <script src="JS/accesibilidad.js"></script>
+
+</body>
+</html>

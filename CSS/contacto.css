@@ -1,0 +1,239 @@
+/* CONTENIDO PRINCIPAL
+   Centro todos los elementos en columna con espacio entre ellos */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    flex: 1;
+    gap: 24px;
+}
+
+/* TÍTULO DE LA SECCIÓN */
+main h2 {
+    font-size: 36px;
+    color: #be185d;
+    text-align: center;
+}
+
+/* SUBTÍTULO DESCRIPTIVO
+   Texto secundario que aparece justo debajo del título */
+.subtitulo {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: -12px;
+}
+
+/* FORMULARIO DE CONTACTO
+   Tarjeta blanca centrada con campos apilados en columna */
+form {
+    background-color: white;
+    border-radius: 20px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ETIQUETAS DE LOS CAMPOS */
+label {
+    font-weight: bold;
+    color: #be185d;
+    margin-top: 14px;
+    font-size: 15px;
+}
+
+/* CAMPOS DE TEXTO Y ÁREA DE MENSAJE
+   Fondo rosado muy claro, borde suave y permitir redimensionar verticalmente */
+input,
+textarea {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #f9a8d4;
+    background-color: #fff0f5;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    resize: vertical;
+}
+
+/* ESTADO ACTIVO DEL CAMPO
+   El borde se oscurece al hacer clic */
+input:focus,
+textarea:focus {
+    border-color: #ec4899;
+}
+
+/* BOTÓN DE ENVÍO */
+button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background-color: #ec4899;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: #be185d;
+}
+
+/* SECCIÓN DE CONTACTO ALTERNATIVO
+   Aparece debajo del formulario con los botones de WhatsApp e Instagram */
+.contacto-alterno {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contacto-alterno p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+/* FILA DE BOTONES DE REDES SOCIALES
+   Los muestro en fila y permito que se envuelvan en pantallas pequeñas */
+.iconos-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* BOTONES DE WHATSAPP E INSTAGRAM
+   Forma de píldora con icono y texto, y animación al pasar el cursor */
+.iconos-contacto a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.iconos-contacto a:hover {
+    transform: translateY(-3px);
+}
+
+/* ICONO CIRCULAR DENTRO DE CADA BOTÓN */
+.iconos-contacto img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+
+/* BOTÓN VERDE DE WHATSAPP */
+.btn-whatsapp {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 2px solid #86efac;
+}
+
+.btn-whatsapp:hover {
+    background-color: #bbf7d0;
+}
+
+/* BOTÓN ROSADO DE INSTAGRAM */
+.btn-instagram {
+    background-color: #fce7f3;
+    color: #be185d;
+    border: 2px solid #f9a8d4;
+}
+
+.btn-instagram:hover {
+    background-color: #fbcfe8;
+}
+
+/* RESPONSIVE - PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+
+    main {
+        padding: 24px 16px;
+    }
+
+    main h2 {
+        font-size: 26px;
+    }
+
+    form {
+        padding: 24px 18px;
+    }
+
+    /* En móvil apilo los botones de redes en columna */
+    .iconos-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconos-contacto a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .confirmacion-contacto {
+        padding: 32px 18px;
+    }
+}
+
+/* TARJETA DE CONFIRMACIÓN DE MENSAJE
+   Aparece después de enviar el formulario */
+.confirmacion-contacto {
+    background-color: white;
+    border-radius: 20px;
+    padding: 48px 32px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+/* EMOJI GRANDE EN LA CONFIRMACIÓN */
+.icono-confirmacion {
+    font-size: 52px;
+}
+
+/* TÍTULO DE LA CONFIRMACIÓN */
+.confirmacion-contacto h3 {
+    font-size: 28px;
+    color: #be185d;
+}
+
+/* TEXTO DEL MENSAJE DE CONFIRMACIÓN */
+.confirmacion-contacto p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* BOTÓN PARA VOLVER AL INICIO */
+.btn-volver-contacto {
+    margin-top: 8px;
+    padding: 10px 30px;
+    background-color: #ec4899;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-volver-contacto:hover {
+    background-color: #be185d;
+}

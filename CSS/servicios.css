@@ -1,0 +1,116 @@
+/* RESET
+   Elimino márgenes y rellenos para tener control total del espaciado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GRILLA DE SERVICIOS
+   Organizo las tarjetas en dos columnas iguales con espacio entre ellas */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+/* TARJETA DE SERVICIO
+   Cada servicio se muestra en una tarjeta rosada con imagen a la izquierda y texto a la derecha */
+.tarjeta {
+    display: flex;
+    background-color: #fce7f3;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* IMAGEN DE LA TARJETA
+   Ancho fijo para que todas las imágenes tengan el mismo tamaño */
+.tarjeta img {
+    width: 160px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* CONTENIDO DE TEXTO DE LA TARJETA
+   El texto ocupa el espacio restante y lo centro verticalmente */
+.tarjeta-texto {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* NOMBRE DEL SERVICIO */
+.tarjeta-texto h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+/* DESCRIPCIÓN DEL SERVICIO */
+.tarjeta-texto p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* PRECIO DEL SERVICIO
+   Lo resalto en rosado oscuro y negrita */
+.precio {
+    font-size: 17px;
+    font-weight: bold;
+    color: #be185d;
+    margin-top: 4px;
+}
+
+/* BOTÓN DE RESERVAR EN LA TARJETA */
+.tarjeta-texto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #ec4899;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* HOVER DEL BOTÓN DE RESERVAR */
+.tarjeta-texto a:hover {
+    background-color: #be185d;
+}
+
+/* RESPONSIVE - PANTALLAS PEQUEÑAS
+   En móvil paso de dos columnas a una sola,
+   y apilo la imagen encima del texto en cada tarjeta */
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+    }
+
+    /* La imagen pasa a estar arriba del texto */
+    .tarjeta {
+        flex-direction: column;
+    }
+
+    /* La imagen ocupa todo el ancho con altura fija */
+    .tarjeta img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .tarjeta-texto {
+        padding: 16px;
+    }
+}

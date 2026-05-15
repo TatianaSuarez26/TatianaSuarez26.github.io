@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Declaro el idioma español para navegadores y lectores de pantalla -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Hago que la página sea responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrodita Nails - Servicios</title>
+
+    <!-- FUENTE Y ESTILOS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Estilos generales compartidos por todas las páginas -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Estilos específicos de la grilla y tarjetas de servicios -->
+    <link rel="stylesheet" href="CSS/servicios.css">
+    <!-- Estilos del widget de accesibilidad -->
+    <link rel="stylesheet" href="CSS/accesibilidad.css">
+</head>
+
+<body>
+
+    <!-- ENLACE DE SALTO -->
+    <!-- Permite a usuarios de teclado ir directo al catálogo sin pasar por el menú -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <!-- LOGO Y NOMBRE -->
+        <div class="header-top">
+            <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
+            <h1>Afrodita Nails</h1>
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+    </header>
+
+    <!-- CATÁLOGO DE SERVICIOS -->
+    <!-- Uso article para que cada tarjeta sea reconocida como contenido independiente -->
+    <main id="contenido-principal" aria-label="Catálogo de servicios">
+
+        <!-- TARJETA: UÑAS ACRÍLICAS -->
+        <!-- El enlace incluye el nombre del servicio como parámetro en la URL para pre-seleccionarlo en la reserva -->
+        <article class="tarjeta">
+            <img src="IMG/ImgAcrilicas.jpg" alt="Resultado de uñas acrílicas profesionales">
+            <div class="tarjeta-texto">
+                <h3>Uñas Acrílicas</h3>
+                <p>Realizadas con productos de alta calidad</p>
+                <!-- aria-label describe el precio completo para lectores de pantalla -->
+                <p class="precio" aria-label="Precio: 100.000 pesos">$100.000</p>
+                <a href="reserva.html?servicio=Uñas Acrílicas" aria-label="Reservar servicio de Uñas Acrílicas">Reservar</a>
+            </div>
+        </article>
+
+        <!-- TARJETA: UÑAS POLYGEL -->
+        <article class="tarjeta">
+            <img src="IMG/ImgPolyGel.jpg" alt="Resultado de uñas PolyGel profesionales">
+            <div class="tarjeta-texto">
+                <h3>Uñas PolyGel</h3>
+                <p>Realizadas con productos de alta calidad</p>
+                <p class="precio" aria-label="Precio: 100.000 pesos">$100.000</p>
+                <a href="reserva.html?servicio=Uñas PolyGel" aria-label="Reservar servicio de Uñas PolyGel">Reservar</a>
+            </div>
+        </article>
+
+        <!-- TARJETA: MANICURE SEMIPERMANENTE -->
+        <article class="tarjeta">
+            <img src="IMG/ImgSemipermanente.jpg" alt="Resultado de manicure semipermanente profesional">
+            <div class="tarjeta-texto">
+                <h3>Manicure Semipermanente</h3>
+                <p>Realizadas con productos de alta calidad</p>
+                <p class="precio" aria-label="Precio: 55.000 pesos">$55.000</p>
+                <a href="reserva.html?servicio=Manicure Semipermanente" aria-label="Reservar servicio de Manicure Semipermanente">Reservar</a>
+            </div>
+        </article>
+
+        <!-- TARJETA: UÑAS SOFTGEL -->
+        <article class="tarjeta">
+            <img src="IMG/ImgSoftgel.jpg" alt="Resultado de uñas SoftGel profesionales">
+            <div class="tarjeta-texto">
+                <h3>Uñas SoftGel</h3>
+                <p>Realizadas con productos de alta calidad</p>
+                <p class="precio" aria-label="Precio: 80.000 pesos">$80.000</p>
+                <a href="reserva.html?servicio=Uñas SoftGel" aria-label="Reservar servicio de Uñas SoftGel">Reservar</a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- WIDGET DE ACCESIBILIDAD -->
+    <div class="accesibilidad-widget">
+        <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
+            <p class="panel-titulo">Accesibilidad</p>
+            <button class="opcion-acc" id="btn-contraste" aria-pressed="false">🔆 Alto contraste</button>
+            <button class="opcion-acc" id="btn-fuente"    aria-pressed="false">🔤 Texto más grande</button>
+            <button class="opcion-acc" id="btn-enlaces"   aria-pressed="false">🔗 Subrayar enlaces</button>
+        </div>
+        <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="JS/accesibilidad.js"></script>
+
+</body>
+</html>
