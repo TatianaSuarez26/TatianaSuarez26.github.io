@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<!-- Declaro el idioma español para navegadores y lectores de pantalla -->
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <!-- Hago que la página sea responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrodita Nails - Ubicación</title>
-
-    <!-- FUENTE Y ESTILOS -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <!-- Estilos generales compartidos por todas las páginas -->
     <link rel="stylesheet" href="CSS/styles.css">
-    <!-- Estilos específicos del mapa y las tarjetas de dirección -->
     <link rel="stylesheet" href="CSS/ubicacion.css">
-    <!-- Estilos del widget de accesibilidad -->
     <link rel="stylesheet" href="CSS/accesibilidad.css">
 </head>
 
 <body>
-
-    <!-- ENLACE DE SALTO -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-
-    <!-- ENCABEZADO -->
     <header>
-        <!-- LOGO Y NOMBRE -->
         <div class="header-top">
             <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
             <h1>Afrodita Nails</h1>
         </div>
-        <!-- MENÚ DE NAVEGACIÓN -->
         <nav aria-label="Navegación principal">
             <a href="index.html">Inicio</a>
             <a href="servicios.html">Servicios</a>
@@ -40,17 +26,9 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
         <h2>¿Dónde encontrarnos?</h2>
-
-        <!-- FILA MAPA + DIRECCIONES -->
-        <!-- En escritorio se muestran lado a lado; en móvil se apilan -->
         <div class="contenido-ubicacion">
-
-            <!-- MAPA DE GOOGLE MAPS -->
-            <!-- loading="lazy" hace que el mapa solo cargue cuando es visible en pantalla -->
-            <!-- referrerpolicy="no-referrer-when-downgrade" mejora la privacidad del usuario -->
             <div class="mapa-contenedor">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.3098696791!2d-74.24789788378906!3d4.6486156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1715000000000!5m2!1ses!2sco"
@@ -59,12 +37,8 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-
-            <!-- PANEL DE SEDES Y DOMICILIO -->
             <div class="info-ubicacion">
                 <h3>Nuestras Sedes</h3>
-
-                <!-- TARJETA SEDE CHAPINERO -->
                 <div class="direccion">
                     <span>🏠</span>
                     <div>
@@ -73,7 +47,6 @@
                     </div>
                 </div>
 
-                <!-- TARJETA SEDE USAQUÉN -->
                 <div class="direccion">
                     <span>🏠</span>
                     <div>
@@ -82,7 +55,6 @@
                     </div>
                 </div>
 
-                <!-- TARJETA SEDE TEUSAQUILLO -->
                 <div class="direccion">
                     <span>🏠</span>
                     <div>
@@ -91,7 +63,6 @@
                     </div>
                 </div>
 
-                <!-- TARJETA SEDE SANTA FE -->
                 <div class="direccion">
                     <span>🏠</span>
                     <div>
@@ -100,8 +71,6 @@
                     </div>
                 </div>
 
-                <!-- TARJETA ATENCIÓN A DOMICILIO -->
-                <!-- La diferencio visualmente con borde rosado para que resalte -->
                 <div class="domicilio">
                     <span>🛵</span>
                     <div>
@@ -109,13 +78,10 @@
                         <p>Llevamos el servicio hasta tu hogar en toda Bogotá. ¡Agenda tu cita y nos encargamos del resto!</p>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </main>
 
-    <!-- WIDGET DE ACCESIBILIDAD -->
     <div class="accesibilidad-widget">
         <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
             <p class="panel-titulo">Accesibilidad</p>
@@ -126,7 +92,6 @@
         <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
     </div>
 
-    <!-- BOTONES FLOTANTES DE REDES SOCIALES -->
     <div class="botones-flotantes">
         <a href="https://wa.me/573000000000" target="_blank" aria-label="Contáctanos por WhatsApp">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -136,12 +101,10 @@
         </a>
     </div>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPT -->
     <script src="JS/accesibilidad.js"></script>
 
 </body>

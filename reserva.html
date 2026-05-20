@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<!-- Declaro el idioma español para navegadores y lectores de pantalla -->
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <!-- Hago que la página sea responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrodita Nails - Reservas</title>
-
-    <!-- FUENTE Y ESTILOS -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <!-- Estilos generales compartidos por todas las páginas -->
     <link rel="stylesheet" href="CSS/styles.css">
-    <!-- Estilos específicos del formulario de reserva -->
     <link rel="stylesheet" href="CSS/reserva.css">
-    <!-- Estilos del widget de accesibilidad -->
     <link rel="stylesheet" href="CSS/accesibilidad.css">
 </head>
 
 <body>
-
-    <!-- ENLACE DE SALTO -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-
-    <!-- ENCABEZADO -->
     <header>
-        <!-- LOGO Y NOMBRE -->
         <div class="header-top">
             <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
             <h1>Afrodita Nails</h1>
         </div>
-        <!-- MENÚ DE NAVEGACIÓN -->
         <nav aria-label="Navegación principal">
             <a href="index.html">Inicio</a>
             <a href="servicios.html">Servicios</a>
@@ -39,28 +25,13 @@
             <a href="nosotros.html">Nosotros</a>
         </nav>
     </header>
-
-    <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
         <h2>Reservar Cita</h2>
-
-        <!-- FORMULARIO DE RESERVA -->
-        <!-- novalidate desactiva la validación nativa del navegador, la manejo yo desde el JS -->
-        <!-- aria-label describe el formulario completo para lectores de pantalla -->
         <form id="form-reserva" aria-label="Formulario de reserva de cita" novalidate>
-
-            <!-- CAMPO NOMBRE -->
-            <!-- autocomplete="name" ayuda al navegador a autocompletar el nombre del usuario -->
             <label for="nombre-reserva">Nombre:</label>
             <input type="text" id="nombre-reserva" autocomplete="name" aria-required="true" required>
-
-            <!-- CAMPO TELÉFONO -->
-            <!-- Lo uso para que el JS pueda mostrarlo en la confirmación y para el contacto por WhatsApp -->
             <label for="telefono-reserva">Número de teléfono:</label>
             <input type="tel" id="telefono-reserva" placeholder="Ej: 3001234567" autocomplete="tel" aria-required="true" required>
-
-            <!-- SELECTOR DE SERVICIO -->
-            <!-- El JS puede pre-seleccionarlo si viene con parámetro en la URL desde la página de servicios -->
             <label for="servicio-reserva">Servicio:</label>
             <select id="servicio-reserva" aria-required="true" required>
                 <option value="">Seleccione un servicio</option>
@@ -70,25 +41,15 @@
                 <option>Uñas SoftGel</option>
                 <option>Uñas PolyGel</option>
             </select>
-
-            <!-- CAMPO FECHA -->
-            <!-- El JS bloquea fechas pasadas y detecta domingos para deshabilitar las horas -->
             <label for="fecha">Fecha:</label>
             <input type="date" id="fecha" aria-required="true" required>
-
-            <!-- SELECTOR DE HORA -->
-            <!-- Las opciones las genera el JS dinámicamente según el día elegido (L-S, 9am-8pm) -->
             <label for="hora">Horas disponibles:</label>
             <select id="hora" aria-required="true" required>
                 <option value="">Seleccione una hora</option>
             </select>
-
-            <!-- LUGAR DE ATENCIÓN -->
-            <!-- Uso fieldset y legend para agrupar los radio buttons de forma accesible -->
             <fieldset style="border:none; padding:0;">
                 <legend>Lugar de atención:</legend>
                 <div class="opciones-lugar">
-                    <!-- "sede" viene marcado por defecto -->
                     <label class="opcion-radio">
                         <input type="radio" name="lugar" value="sede" checked> 🏠 En sede
                     </label>
@@ -97,9 +58,6 @@
                     </label>
                 </div>
             </fieldset>
-
-            <!-- SELECTOR DE SEDE -->
-            <!-- El JS oculta este bloque cuando el usuario elige "A domicilio" -->
             <div id="seccion-sede">
                 <label for="sede-reserva">Sede:</label>
                 <select id="sede-reserva">
@@ -113,34 +71,23 @@
 
             <button type="submit">Reservar</button>
         </form>
-
-        <!-- CONFIRMACIÓN PARA RESERVA EN SEDE -->
-        <!-- Oculto por defecto; el JS lo muestra al enviar el formulario si eligió sede -->
-        <!-- role="alert" y aria-live="polite" hacen que el lector de pantalla lo anuncie automáticamente -->
         <div id="confirmacion-sede" class="confirmacion-reserva" style="display:none;" role="alert" aria-live="polite">
-            <!-- aria-hidden="true" oculta los emojis decorativos a los lectores de pantalla -->
             <div class="estrellas" aria-hidden="true">⭐✨⭐✨⭐</div>
             <h3>¡Tu cita fue reservada!</h3>
-            <!-- El JS rellena este párrafo con los datos de la cita -->
             <p id="detalle-reserva"></p>
             <a href="index.html" class="btn-volver">Volver al inicio</a>
         </div>
 
-        <!-- CONFIRMACIÓN PARA RESERVA A DOMICILIO -->
-        <!-- Oculto por defecto; el JS lo muestra al enviar si eligió domicilio -->
         <div id="confirmacion-domicilio" class="confirmacion-reserva" style="display:none;" role="alert" aria-live="polite">
             <div class="estrellas" aria-hidden="true">🛵💬🛵</div>
             <h3>¡Solicitud recibida!</h3>
-            <!-- El JS rellena este párrafo con los datos de la solicitud -->
             <p id="detalle-domicilio"></p>
-            <!-- Aviso verde que informa que llegará un mensaje por WhatsApp -->
             <p class="nota-whatsapp">Te enviaremos un mensaje por WhatsApp para confirmar los detalles de tu domicilio.</p>
             <a href="index.html" class="btn-volver">Volver al inicio</a>
         </div>
 
     </main>
 
-    <!-- WIDGET DE ACCESIBILIDAD -->
     <div class="accesibilidad-widget">
         <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
             <p class="panel-titulo">Accesibilidad</p>
@@ -151,13 +98,10 @@
         <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
     </div>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPTS -->
-    <!-- reserva.js maneja horas, pre-selección de servicio y confirmación -->
     <script src="JS/reserva.js"></script>
     <script src="JS/accesibilidad.js"></script>
 

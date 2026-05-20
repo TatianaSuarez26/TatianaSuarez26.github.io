@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<!-- Declaro el idioma español para navegadores y lectores de pantalla -->
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <!-- Hago que la página sea responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrodita Nails - Nosotros</title>
-
-    <!-- FUENTE Y ESTILOS -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <!-- Estilos generales compartidos por todas las páginas -->
     <link rel="stylesheet" href="CSS/styles.css">
-    <!-- Estilos específicos de las tarjetas de misión, visión y valores -->
     <link rel="stylesheet" href="CSS/nosotros.css">
-    <!-- Estilos del widget de accesibilidad -->
     <link rel="stylesheet" href="CSS/accesibilidad.css">
 </head>
 
 <body>
-
-    <!-- ENLACE DE SALTO -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-
-    <!-- ENCABEZADO -->
     <header>
-        <!-- LOGO Y NOMBRE -->
         <div class="header-top">
             <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
             <h1>Afrodita Nails</h1>
         </div>
-        <!-- MENÚ DE NAVEGACIÓN -->
         <nav aria-label="Navegación principal">
             <a href="index.html">Inicio</a>
             <a href="servicios.html">Servicios</a>
@@ -40,15 +26,9 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
         <h2>Nosotros</h2>
-
-        <!-- TARJETAS DE MISIÓN Y VISIÓN -->
-        <!-- Las muestro en fila; en móvil se apilan automáticamente gracias al CSS -->
         <div class="tarjetas-nosotros">
-
-            <!-- TARJETA DE MISIÓN -->
             <div class="tarjeta-nosotros">
                 <div class="icono">🌸</div>
                 <h3>Misión</h3>
@@ -58,7 +38,6 @@
                 personalizada, porque creemos que cuidarse es un acto de amor propio.</p>
             </div>
 
-            <!-- TARJETA DE VISIÓN -->
             <div class="tarjeta-nosotros">
                 <div class="icono">✨</div>
                 <h3>Visión</h3>
@@ -66,11 +45,8 @@
                 en cada servicio, la fidelidad de nuestras clientas y la formación continua de nuestro equipo.
                 Queremos que Afrodita Nails sea sinónimo de confianza, creatividad y bienestar femenino.</p>
             </div>
-
         </div>
 
-        <!-- SECCIÓN DE VALORES -->
-        <!-- Cada valor se muestra en una cajita con emoji y nombre -->
         <div class="valores">
             <h3>Nuestros Valores</h3>
             <div class="valores-grid">
@@ -99,7 +75,6 @@
 
     </main>
 
-    <!-- WIDGET DE ACCESIBILIDAD -->
     <div class="accesibilidad-widget">
         <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
             <p class="panel-titulo">Accesibilidad</p>
@@ -110,7 +85,6 @@
         <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
     </div>
 
-    <!-- BOTONES FLOTANTES DE REDES SOCIALES -->
     <div class="botones-flotantes">
         <a href="https://wa.me/573000000000" target="_blank" aria-label="Contáctanos por WhatsApp">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -120,12 +94,10 @@
         </a>
     </div>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPT -->
     <script src="JS/accesibilidad.js"></script>
 
 </body>

@@ -1,50 +1,9 @@
-/* RESET GENERAL
-   Elimino márgenes, rellenos y aplico box-sizing a todos los elementos
-   para tener control total sobre el espaciado en toda la página */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ENLACE PARA SALTAR AL CONTENIDO
-   Oculto este enlace fuera de la pantalla por defecto.
-   Solo aparece cuando el usuario navega con teclado (al recibir foco),
-   permitiéndole saltar directo al contenido sin pasar por el menú */
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 16px;
-    background-color: #be185d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 0 0 10px 10px;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 999;
-    transition: top 0.2s;
-}
-.skip-link:focus {
-    top: 0;
-}
-
-/* FOCO VISIBLE PARA TECLADO
-   Muestro un contorno rosado cuando el usuario navega con teclado
-   sobre enlaces, botones y campos de formulario */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-    outline: 3px solid #be185d;
-    outline-offset: 3px;
-    border-radius: 4px;
-}
-
-/* CUERPO DE LA PÁGINA
-   Establezco la fuente, el color de fondo rosado claro y uso flexbox
-   para que el footer siempre quede pegado al fondo */
 body {
     font-family: 'Playfair Display', Arial, sans-serif;
     background-color: #fff0f5;
@@ -53,16 +12,11 @@ body {
     flex-direction: column;
 }
 
-/* ENCABEZADO
-   Fondo rosado claro con texto centrado para todas las páginas */
 header {
     background-color: #fbcfe8;
     padding: 10px 20px;
     text-align: center;
 }
-
-/* CONTENEDOR DEL LOGO Y TÍTULO
-   Uso flexbox para poner el logo y el nombre del spa uno al lado del otro, centrados */
 .header-top {
     display: flex;
     justify-content: center;
@@ -71,8 +25,6 @@ header {
     margin-bottom: 16px;
 }
 
-/* LOGO
-   Le doy forma circular con border-radius y una sombra suave */
 .logo-header {
     width: 70px;
     height: 70px;
@@ -81,14 +33,10 @@ header {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* TÍTULO PRINCIPAL */
 header h1 {
     font-size: 48px;
     color: #1a1a1a;
 }
-
-/* BARRA DE NAVEGACIÓN
-   Muestro los botones en fila centrada y permito que se envuelvan en pantallas pequeñas */
 nav {
     display: flex;
     justify-content: center;
@@ -96,8 +44,6 @@ nav {
     flex-wrap: wrap;
 }
 
-/* BOTONES DEL MENÚ
-   Estilo de píldora rosado con texto oscuro */
 nav a {
     text-decoration: none;
     background-color: #f472b6;
@@ -107,15 +53,11 @@ nav a {
     font-size: 18px;
 }
 
-/* HOVER DEL MENÚ
-   Al pasar el cursor los botones se oscurecen y el texto se vuelve blanco */
 nav a:hover {
     background-color: #be185d;
     color: white;
 }
 
-/* CONTENIDO PRINCIPAL - PÁGINA DE INICIO
-   Dispongo el texto de bienvenida y el carrusel en fila, con espacio entre ellos */
 main {
     display: flex;
     gap: 40px;
@@ -127,8 +69,6 @@ main {
     width: 100%;
 }
 
-/* SECCIÓN DE BIENVENIDA
-   Ocupa el espacio disponible con texto centrado y espaciado entre líneas */
 .texto-bienvenida {
     flex: 1;
     font-size: 18px;
@@ -138,8 +78,6 @@ main {
     padding-top: 20px;
 }
 
-/* BOTÓN DE RESERVAR EN INICIO
-   Botón rosado con forma de píldora, sombra y animación al pasar el cursor */
 .btn-reservar {
     display: inline-block;
     margin-top: 24px;
@@ -158,17 +96,12 @@ main {
     transform: translateY(-2px);
 }
 
-/* CARRUSEL
-   Ancho fijo para que no crezca más allá del espacio asignado */
 .carrusel {
     width: 380px;
     flex-shrink: 0;
     text-align: center;
 }
 
-/* IMAGEN DEL CARRUSEL
-   Altura fija con object-fit para que las fotos no se distorsionen.
-   La transición de opacidad permite el efecto de fade entre imágenes */
 .carrusel img {
     width: 100%;
     height: 430px;
@@ -177,14 +110,12 @@ main {
     transition: opacity 0.2s ease;
 }
 
-/* TEXTO BAJO EL CARRUSEL */
 .carrusel p {
     margin-top: 10px;
     font-size: 15px;
     color: #555;
 }
 
-/* CONTENEDOR DE LOS BOTONES DEL CARRUSEL */
 .botones-carrusel {
     display: flex;
     justify-content: center;
@@ -192,7 +123,6 @@ main {
     margin-top: 10px;
 }
 
-/* BOTONES ANTERIOR Y SIGUIENTE DEL CARRUSEL */
 .botones-carrusel button {
     background-color: #ec4899;
     color: white;
@@ -203,7 +133,6 @@ main {
     cursor: pointer;
 }
 
-/* HOVER DEL ENLACE EN TARJETAS DE SERVICIO */
 .tarjeta-texto a:hover {
     background-color: #be185d;
 }
