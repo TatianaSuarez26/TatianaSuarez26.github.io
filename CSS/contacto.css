@@ -193,10 +193,7 @@ button:hover {
     background-color: #be185d;
 }
 
-/* =============================================
-   RESPONSIVE — Adapta el diseño a móvil/tablet
-   Se activa en pantallas de máximo 768px
-   ============================================= */
+/* RESPONSIVE  */
 @media (max-width: 768px) {
 
     main {

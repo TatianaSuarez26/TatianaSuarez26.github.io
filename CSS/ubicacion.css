@@ -111,10 +111,7 @@ main h2 {
     line-height: 1.6;
 }
 
-/* =============================================
-   RESPONSIVE — Adapta el diseño a móvil/tablet
-   Se activa en pantallas de máximo 768px
-   ============================================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
 
     main {

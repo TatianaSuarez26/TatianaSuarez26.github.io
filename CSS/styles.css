@@ -189,10 +189,7 @@ footer p {
     color: #1a1a1a;
 }
 
-/* =============================================
-   RESPONSIVE — Adapta el diseño a móvil/tablet
-   Se activa en pantallas de máximo 768px
-   ============================================= */
+/* RESPONSIVE  */
 @media (max-width: 768px) {
 
     /* Logo más pequeño */
