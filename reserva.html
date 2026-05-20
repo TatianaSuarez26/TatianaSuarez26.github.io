@@ -11,12 +11,17 @@
 </head>
 
 <body>
+    <!-- Enlace de salto -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Encabezado -->
     <header>
+        <!-- Logo y nombre -->
         <div class="header-top">
             <img src="IMG/ImgLogo.jpg" alt="Logo Afrodita Nails" class="logo-header">
             <h1>Afrodita Nails</h1>
         </div>
+        <!-- Menú de navegación -->
         <nav aria-label="Navegación principal">
             <a href="index.html">Inicio</a>
             <a href="servicios.html">Servicios</a>
@@ -25,8 +30,11 @@
             <a href="nosotros.html">Nosotros</a>
         </nav>
     </header>
+
     <main id="contenido-principal">
         <h2>Reservar Cita</h2>
+
+        <!-- Formulario de reserva -->
         <form id="form-reserva" aria-label="Formulario de reserva de cita" novalidate>
             <label for="nombre-reserva">Nombre:</label>
             <input type="text" id="nombre-reserva" autocomplete="name" aria-required="true" required>
@@ -47,6 +55,8 @@
             <select id="hora" aria-required="true" required>
                 <option value="">Seleccione una hora</option>
             </select>
+
+            <!-- Lugar de atención -->
             <fieldset style="border:none; padding:0;">
                 <legend>Lugar de atención:</legend>
                 <div class="opciones-lugar">
@@ -58,6 +68,8 @@
                     </label>
                 </div>
             </fieldset>
+
+            <!-- Selector de sede -->
             <div id="seccion-sede">
                 <label for="sede-reserva">Sede:</label>
                 <select id="sede-reserva">
@@ -71,6 +83,8 @@
 
             <button type="submit">Reservar</button>
         </form>
+
+        <!-- Confirmación en sede -->
         <div id="confirmacion-sede" class="confirmacion-reserva" style="display:none;" role="alert" aria-live="polite">
             <div class="estrellas" aria-hidden="true">⭐✨⭐✨⭐</div>
             <h3>¡Tu cita fue reservada!</h3>
@@ -78,6 +92,7 @@
             <a href="index.html" class="btn-volver">Volver al inicio</a>
         </div>
 
+        <!-- Confirmación a domicilio -->
         <div id="confirmacion-domicilio" class="confirmacion-reserva" style="display:none;" role="alert" aria-live="polite">
             <div class="estrellas" aria-hidden="true">🛵💬🛵</div>
             <h3>¡Solicitud recibida!</h3>
@@ -85,9 +100,9 @@
             <p class="nota-whatsapp">Te enviaremos un mensaje por WhatsApp para confirmar los detalles de tu domicilio.</p>
             <a href="index.html" class="btn-volver">Volver al inicio</a>
         </div>
-
     </main>
 
+    <!-- Widget de accesibilidad -->
     <div class="accesibilidad-widget">
         <div class="panel-accesibilidad" id="panel-accesibilidad" hidden>
             <p class="panel-titulo">Accesibilidad</p>
@@ -98,6 +113,7 @@
         <button class="btn-accesibilidad" id="btn-accesibilidad" aria-label="Opciones de accesibilidad" aria-expanded="false">♿</button>
     </div>
 
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2026 Afrodita Nails. Todos los derechos reservados.</p>
     </footer>

@@ -1,5 +1,4 @@
-/* CONTENIDO PRINCIPAL
-   Centro todos los bloques en columna con espacio entre ellos */
+/* CONTENIDO PRINCIPAL */
 main {
     display: flex;
     flex-direction: column;
@@ -9,15 +8,14 @@ main {
     gap: 40px;
 }
 
-/* TÍTULO DE LA SECCIÓN */
+/* TÍTULO */
 main h2 {
     font-size: 36px;
     color: #be185d;
     text-align: center;
 }
 
-/* FILA DE TARJETAS DE MISIÓN Y VISIÓN
-   Las muestro en fila y permito que se apilen si la pantalla es pequeña */
+/* TARJETAS DE MISIÓN Y VISIÓN */
 .tarjetas-nosotros {
     display: flex;
     gap: 30px;
@@ -27,8 +25,7 @@ main h2 {
     max-width: 1000px;
 }
 
-/* TARJETA INDIVIDUAL DE MISIÓN O VISIÓN
-   Fondo rosado claro, bordes redondeados y sombra suave */
+/* TARJETA INDIVIDUAL */
 .tarjeta-nosotros {
     background-color: #fce7f3;
     border-radius: 20px;
@@ -40,43 +37,38 @@ main h2 {
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* EMOJI DECORATIVO GRANDE EN LA PARTE SUPERIOR DE CADA TARJETA */
+/* EMOJI DECORATIVO */
 .icono {
     font-size: 48px;
     margin-bottom: 16px;
 }
 
-/* TÍTULO DE CADA TARJETA */
 .tarjeta-nosotros h3 {
     font-size: 24px;
     color: #be185d;
     margin-bottom: 14px;
 }
 
-/* TEXTO DE CADA TARJETA */
 .tarjeta-nosotros p {
     font-size: 15px;
     color: #444;
     line-height: 1.8;
 }
 
-/* SECCIÓN DE VALORES
-   Bloque centrado con el título y las cajitas de valores */
+/* SECCIÓN DE VALORES */
 .valores {
     width: 100%;
     max-width: 1000px;
     text-align: center;
 }
 
-/* TÍTULO DE LA SECCIÓN DE VALORES */
 .valores h3 {
     font-size: 26px;
     color: #be185d;
     margin-bottom: 24px;
 }
 
-/* FILA DE VALORES
-   Muestro los valores en fila y permito que se envuelvan */
+/* FILA DE VALORES */
 .valores-grid {
     display: flex;
     justify-content: center;
@@ -84,8 +76,7 @@ main h2 {
     flex-wrap: wrap;
 }
 
-/* CAJITA DE CADA VALOR
-   Tarjeta blanca con borde rosado y sombra muy suave */
+/* CAJITA DE VALOR */
 .valor {
     background-color: white;
     border: 2px solid #f9a8d4;
@@ -96,21 +87,22 @@ main h2 {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* EMOJI DENTRO DE CADA CAJITA DE VALOR */
 .valor span {
     font-size: 32px;
     display: block;
     margin-bottom: 8px;
 }
 
-/* NOMBRE DEL VALOR */
 .valor p {
     font-size: 14px;
     font-weight: bold;
     color: #be185d;
 }
 
-/* RESPONSIVE - PANTALLAS PEQUEÑAS */
+/* =============================================
+   RESPONSIVE — Adapta el diseño a móvil/tablet
+   Se activa en pantallas de máximo 768px
+   ============================================= */
 @media (max-width: 768px) {
 
     main {
@@ -122,7 +114,7 @@ main h2 {
         font-size: 28px;
     }
 
-    /* Las tarjetas ocupan todo el ancho disponible en móvil */
+    /* Tarjetas ocupan todo el ancho */
     .tarjeta-nosotros {
         padding: 24px 18px;
         max-width: 100%;
@@ -136,7 +128,7 @@ main h2 {
         font-size: 22px;
     }
 
-    /* Las cajitas de valores se hacen un poco más compactas */
+    /* Cajitas de valores más compactas */
     .valor {
         padding: 16px 20px;
         min-width: 90px;

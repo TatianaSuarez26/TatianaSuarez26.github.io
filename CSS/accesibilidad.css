@@ -1,6 +1,4 @@
-/* CONTENEDOR DEL WIDGET
-   Fijo el widget en la esquina inferior izquierda de la pantalla.
-   Uso flexbox en columna para que el panel aparezca encima del botón */
+/* WIDGET DE ACCESIBILIDAD */
 .accesibilidad-widget {
     position: fixed;
     bottom: 80px;
@@ -12,8 +10,7 @@
     gap: 8px;
 }
 
-/* BOTÓN PRINCIPAL DEL WIDGET
-   Botón circular rosado con el símbolo ♿ que abre y cierra el panel */
+/* BOTÓN PRINCIPAL */
 .btn-accesibilidad {
     width: 52px;
     height: 52px;
@@ -30,14 +27,12 @@
     justify-content: center;
 }
 
-/* HOVER DEL BOTÓN PRINCIPAL */
 .btn-accesibilidad:hover {
     background-color: #be185d;
     transform: translateY(-2px);
 }
 
-/* PANEL DE OPCIONES
-   Tarjeta blanca con borde rosado que contiene los tres botones de accesibilidad */
+/* PANEL DE OPCIONES */
 .panel-accesibilidad {
     background-color: white;
     border-radius: 16px;
@@ -50,13 +45,12 @@
     border: 2px solid #f9a8d4;
 }
 
-/* OCULTAR EL PANEL CUANDO TIENE EL ATRIBUTO hidden
-   Uso !important para que este estilo no sea anulado por el display:flex del panel */
+/* Oculta el panel cuando tiene el atributo hidden */
 .panel-accesibilidad[hidden] {
     display: none !important;
 }
 
-/* TÍTULO DENTRO DEL PANEL */
+/* TÍTULO DEL PANEL */
 .panel-titulo {
     font-size: 13px;
     font-weight: bold;
@@ -65,8 +59,7 @@
     margin-bottom: 2px;
 }
 
-/* BOTONES DE OPCIONES
-   Cada botón tiene fondo rosado claro, borde y texto alineado a la izquierda */
+/* BOTONES DE OPCIONES */
 .opcion-acc {
     display: flex;
     align-items: center;
@@ -83,13 +76,11 @@
     transition: background-color 0.2s;
 }
 
-/* HOVER DE LOS BOTONES DE OPCIONES */
 .opcion-acc:hover {
     background-color: #fce7f3;
 }
 
-/* ESTADO ACTIVO DE UN BOTÓN
-   Cuando una opción está activada, el botón se pone rosado fuerte para indicarlo visualmente */
+/* ESTADO ACTIVO */
 .opcion-acc.activo {
     background-color: #ec4899;
     color: white;
@@ -97,9 +88,7 @@
 }
 
 
-/* MODO ALTO CONTRASTE
-   Cuando el usuario activa esta opción, cambio fondo y texto a negro/blanco
-   en todos los elementos principales de la página */
+/* MODO ALTO CONTRASTE */
 body.alto-contraste {
     background-color: #000 !important;
     color: #fff !important;
@@ -113,7 +102,6 @@ body.alto-contraste header h1 {
     color: #fff !important;
 }
 
-/* Botones del menú en contraste alto */
 body.alto-contraste nav a {
     background-color: #333 !important;
     color: #fff !important;
@@ -124,7 +112,6 @@ body.alto-contraste nav a:hover {
     color: #000 !important;
 }
 
-/* Secciones de contenido en contraste alto */
 body.alto-contraste main,
 body.alto-contraste .texto-bienvenida,
 body.alto-contraste .tarjeta,
@@ -135,14 +122,12 @@ body.alto-contraste .panel-accesibilidad {
     color: #fff !important;
 }
 
-/* Textos secundarios en contraste alto */
 body.alto-contraste .tarjeta-nosotros p,
 body.alto-contraste .tarjeta-texto p,
 body.alto-contraste .texto-bienvenida p {
     color: #ddd !important;
 }
 
-/* Campos de formulario en contraste alto */
 body.alto-contraste input,
 body.alto-contraste select,
 body.alto-contraste textarea {
@@ -151,7 +136,6 @@ body.alto-contraste textarea {
     border-color: #fff !important;
 }
 
-/* Pie de página en contraste alto */
 body.alto-contraste footer {
     background-color: #1a1a1a !important;
     color: #fff !important;
@@ -162,9 +146,7 @@ body.alto-contraste footer p {
 }
 
 
-/* MODO TEXTO GRANDE
-   Aumento los tamaños de fuente en px de todos los elementos con texto.
-   Uso !important para sobrescribir los tamaños fijos definidos en los demás CSS */
+/* MODO TEXTO GRANDE */
 body.texto-grande header h1 {
     font-size: 56px !important;
 }
@@ -208,9 +190,7 @@ body.texto-grande .precio {
 }
 
 
-/* MODO SUBRAYAR ENLACES
-   Subrayo todos los enlaces del sitio para que sean identificables
-   sin depender únicamente del color */
+/* MODO SUBRAYAR ENLACES */
 body.subrayar-enlaces a {
     text-decoration: underline !important;
 }

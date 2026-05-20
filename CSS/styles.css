@@ -1,9 +1,11 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ESTILOS DEL BODY */
 body {
     font-family: 'Playfair Display', Arial, sans-serif;
     background-color: #fff0f5;
@@ -12,11 +14,14 @@ body {
     flex-direction: column;
 }
 
+/* ENCABEZADO */
 header {
     background-color: #fbcfe8;
     padding: 10px 20px;
     text-align: center;
 }
+
+/* LOGO Y NOMBRE */
 .header-top {
     display: flex;
     justify-content: center;
@@ -37,6 +42,8 @@ header h1 {
     font-size: 48px;
     color: #1a1a1a;
 }
+
+/* MENÚ DE NAVEGACIÓN */
 nav {
     display: flex;
     justify-content: center;
@@ -58,6 +65,7 @@ nav a:hover {
     color: white;
 }
 
+/* CONTENIDO PRINCIPAL */
 main {
     display: flex;
     gap: 40px;
@@ -69,6 +77,7 @@ main {
     width: 100%;
 }
 
+/* TEXTO DE BIENVENIDA */
 .texto-bienvenida {
     flex: 1;
     font-size: 18px;
@@ -78,6 +87,7 @@ main {
     padding-top: 20px;
 }
 
+/* BOTÓN RESERVAR */
 .btn-reservar {
     display: inline-block;
     margin-top: 24px;
@@ -96,6 +106,7 @@ main {
     transform: translateY(-2px);
 }
 
+/* CARRUSEL DE IMÁGENES */
 .carrusel {
     width: 380px;
     flex-shrink: 0;
@@ -116,6 +127,7 @@ main {
     color: #555;
 }
 
+/* BOTONES DEL CARRUSEL */
 .botones-carrusel {
     display: flex;
     justify-content: center;
@@ -137,8 +149,7 @@ main {
     background-color: #be185d;
 }
 
-/* BOTONES FLOTANTES DE REDES SOCIALES
-   Fijos en la esquina inferior derecha, visibles en todas las páginas */
+/* BOTONES FLOTANTES DE REDES SOCIALES */
 .botones-flotantes {
     position: fixed;
     right: 16px;
@@ -149,21 +160,18 @@ main {
     z-index: 100;
 }
 
-/* TAMAÑO DE CADA BOTÓN FLOTANTE */
 .botones-flotantes a {
     display: block;
     width: 52px;
     height: 52px;
 }
 
-/* ICONO CIRCULAR CON SOMBRA */
 .botones-flotantes img {
     width: 100%;
     border-radius: 50%;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* ANIMACIÓN AL PASAR EL CURSOR SOBRE LOS BOTONES FLOTANTES */
 .botones-flotantes a:hover img {
     transform: translateY(-3px);
     transition: transform 0.2s;
@@ -181,28 +189,30 @@ footer p {
     color: #1a1a1a;
 }
 
-/* RESPONSIVE - PANTALLAS PEQUEÑAS (máximo 768px)
-   Adapto el diseño para que sea cómodo en móvil y tablet */
+/* =============================================
+   RESPONSIVE — Adapta el diseño a móvil/tablet
+   Se activa en pantallas de máximo 768px
+   ============================================= */
 @media (max-width: 768px) {
 
-    /* Reduzco el logo para que no ocupe tanto espacio */
+    /* Logo más pequeño */
     .logo-header {
         width: 52px;
         height: 52px;
     }
 
-    /* Achico el título del spa */
+    /* Título más compacto */
     header h1 {
         font-size: 30px;
     }
 
-    /* Hago los botones del menú más compactos */
+    /* Botones del menú más pequeños */
     nav a {
         padding: 8px 16px;
         font-size: 14px;
     }
 
-    /* En móvil apilo el texto y el carrusel en columna en lugar de fila */
+    /* Texto y carrusel en columna en lugar de fila */
     main {
         flex-direction: column;
         padding: 24px 16px;
@@ -210,23 +220,23 @@ footer p {
         align-items: center;
     }
 
-    /* El carrusel ocupa todo el ancho disponible */
+    /* Carrusel ocupa todo el ancho */
     .carrusel {
         width: 100%;
     }
 
-    /* Reduzco la altura de las imágenes del carrusel en móvil */
+    /* Imagen del carrusel más baja */
     .carrusel img {
         height: 260px;
     }
 
-    /* Achico el texto de bienvenida */
+    /* Texto de bienvenida más pequeño */
     .texto-bienvenida {
         font-size: 16px;
         padding-top: 0;
     }
 
-    /* Ajusto la posición de los botones flotantes en móvil */
+    /* Botones flotantes reposicionados */
     .botones-flotantes {
         right: 10px;
         bottom: 60px;

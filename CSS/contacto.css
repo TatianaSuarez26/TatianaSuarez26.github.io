@@ -1,5 +1,4 @@
-/* CONTENIDO PRINCIPAL
-   Centro todos los elementos en columna con espacio entre ellos */
+/* CONTENIDO PRINCIPAL */
 main {
     display: flex;
     flex-direction: column;
@@ -9,15 +8,14 @@ main {
     gap: 24px;
 }
 
-/* TÍTULO DE LA SECCIÓN */
+/* TÍTULO */
 main h2 {
     font-size: 36px;
     color: #be185d;
     text-align: center;
 }
 
-/* SUBTÍTULO DESCRIPTIVO
-   Texto secundario que aparece justo debajo del título */
+/* SUBTÍTULO */
 .subtitulo {
     font-size: 16px;
     color: #666;
@@ -25,8 +23,7 @@ main h2 {
     margin-top: -12px;
 }
 
-/* FORMULARIO DE CONTACTO
-   Tarjeta blanca centrada con campos apilados en columna */
+/* FORMULARIO */
 form {
     background-color: white;
     border-radius: 20px;
@@ -39,7 +36,7 @@ form {
     gap: 6px;
 }
 
-/* ETIQUETAS DE LOS CAMPOS */
+/* ETIQUETAS */
 label {
     font-weight: bold;
     color: #be185d;
@@ -47,8 +44,7 @@ label {
     font-size: 15px;
 }
 
-/* CAMPOS DE TEXTO Y ÁREA DE MENSAJE
-   Fondo rosado muy claro, borde suave y permitir redimensionar verticalmente */
+/* CAMPOS DE TEXTO */
 input,
 textarea {
     padding: 10px 14px;
@@ -61,8 +57,6 @@ textarea {
     resize: vertical;
 }
 
-/* ESTADO ACTIVO DEL CAMPO
-   El borde se oscurece al hacer clic */
 input:focus,
 textarea:focus {
     border-color: #ec4899;
@@ -87,8 +81,7 @@ button:hover {
     background-color: #be185d;
 }
 
-/* SECCIÓN DE CONTACTO ALTERNATIVO
-   Aparece debajo del formulario con los botones de WhatsApp e Instagram */
+/* CONTACTO ALTERNATIVO */
 .contacto-alterno {
     text-align: center;
     width: 100%;
@@ -101,8 +94,7 @@ button:hover {
     margin-bottom: 16px;
 }
 
-/* FILA DE BOTONES DE REDES SOCIALES
-   Los muestro en fila y permito que se envuelvan en pantallas pequeñas */
+/* BOTONES DE REDES SOCIALES */
 .iconos-contacto {
     display: flex;
     justify-content: center;
@@ -110,8 +102,6 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* BOTONES DE WHATSAPP E INSTAGRAM
-   Forma de píldora con icono y texto, y animación al pasar el cursor */
 .iconos-contacto a {
     display: flex;
     align-items: center;
@@ -128,14 +118,13 @@ button:hover {
     transform: translateY(-3px);
 }
 
-/* ICONO CIRCULAR DENTRO DE CADA BOTÓN */
 .iconos-contacto img {
     width: 26px;
     height: 26px;
     border-radius: 50%;
 }
 
-/* BOTÓN VERDE DE WHATSAPP */
+/* BOTÓN WHATSAPP */
 .btn-whatsapp {
     background-color: #dcfce7;
     color: #15803d;
@@ -146,7 +135,7 @@ button:hover {
     background-color: #bbf7d0;
 }
 
-/* BOTÓN ROSADO DE INSTAGRAM */
+/* BOTÓN INSTAGRAM */
 .btn-instagram {
     background-color: #fce7f3;
     color: #be185d;
@@ -157,39 +146,7 @@ button:hover {
     background-color: #fbcfe8;
 }
 
-/* RESPONSIVE - PANTALLAS PEQUEÑAS */
-@media (max-width: 768px) {
-
-    main {
-        padding: 24px 16px;
-    }
-
-    main h2 {
-        font-size: 26px;
-    }
-
-    form {
-        padding: 24px 18px;
-    }
-
-    /* En móvil apilo los botones de redes en columna */
-    .iconos-contacto {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .iconos-contacto a {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .confirmacion-contacto {
-        padding: 32px 18px;
-    }
-}
-
-/* TARJETA DE CONFIRMACIÓN DE MENSAJE
-   Aparece después de enviar el formulario */
+/* CONFIRMACIÓN DE MENSAJE */
 .confirmacion-contacto {
     background-color: white;
     border-radius: 20px;
@@ -204,25 +161,23 @@ button:hover {
     text-align: center;
 }
 
-/* EMOJI GRANDE EN LA CONFIRMACIÓN */
+/* EMOJI DE CONFIRMACIÓN */
 .icono-confirmacion {
     font-size: 52px;
 }
 
-/* TÍTULO DE LA CONFIRMACIÓN */
 .confirmacion-contacto h3 {
     font-size: 28px;
     color: #be185d;
 }
 
-/* TEXTO DEL MENSAJE DE CONFIRMACIÓN */
 .confirmacion-contacto p {
     font-size: 15px;
     color: #444;
     line-height: 1.8;
 }
 
-/* BOTÓN PARA VOLVER AL INICIO */
+/* BOTÓN VOLVER */
 .btn-volver-contacto {
     margin-top: 8px;
     padding: 10px 30px;
@@ -236,4 +191,38 @@ button:hover {
 
 .btn-volver-contacto:hover {
     background-color: #be185d;
+}
+
+/* =============================================
+   RESPONSIVE — Adapta el diseño a móvil/tablet
+   Se activa en pantallas de máximo 768px
+   ============================================= */
+@media (max-width: 768px) {
+
+    main {
+        padding: 24px 16px;
+    }
+
+    main h2 {
+        font-size: 26px;
+    }
+
+    form {
+        padding: 24px 18px;
+    }
+
+    /* Botones de redes en columna en lugar de fila */
+    .iconos-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconos-contacto a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .confirmacion-contacto {
+        padding: 32px 18px;
+    }
 }

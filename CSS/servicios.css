@@ -1,13 +1,11 @@
-/* RESET
-   Elimino márgenes y rellenos para tener control total del espaciado */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* GRILLA DE SERVICIOS
-   Organizo las tarjetas en dos columnas iguales con espacio entre ellas */
+/* GRILLA DE SERVICIOS */
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -19,8 +17,7 @@ main {
     flex: 1;
 }
 
-/* TARJETA DE SERVICIO
-   Cada servicio se muestra en una tarjeta rosada con imagen a la izquierda y texto a la derecha */
+/* TARJETA DE SERVICIO */
 .tarjeta {
     display: flex;
     background-color: #fce7f3;
@@ -28,16 +25,14 @@ main {
     overflow: hidden;
 }
 
-/* IMAGEN DE LA TARJETA
-   Ancho fijo para que todas las imágenes tengan el mismo tamaño */
+/* IMAGEN DE LA TARJETA */
 .tarjeta img {
     width: 160px;
     flex-shrink: 0;
     object-fit: cover;
 }
 
-/* CONTENIDO DE TEXTO DE LA TARJETA
-   El texto ocupa el espacio restante y lo centro verticalmente */
+/* CONTENIDO DE TEXTO */
 .tarjeta-texto {
     flex: 1;
     padding: 20px;
@@ -55,15 +50,14 @@ main {
     color: #1a1a1a;
 }
 
-/* DESCRIPCIÓN DEL SERVICIO */
+/* DESCRIPCIÓN */
 .tarjeta-texto p {
     font-size: 15px;
     color: #444;
     margin-bottom: 6px;
 }
 
-/* PRECIO DEL SERVICIO
-   Lo resalto en rosado oscuro y negrita */
+/* PRECIO */
 .precio {
     font-size: 17px;
     font-weight: bold;
@@ -71,7 +65,7 @@ main {
     margin-top: 4px;
 }
 
-/* BOTÓN DE RESERVAR EN LA TARJETA */
+/* BOTÓN RESERVAR */
 .tarjeta-texto a {
     display: inline-block;
     margin-top: 10px;
@@ -84,27 +78,28 @@ main {
     font-size: 14px;
 }
 
-/* HOVER DEL BOTÓN DE RESERVAR */
 .tarjeta-texto a:hover {
     background-color: #be185d;
 }
 
-/* RESPONSIVE - PANTALLAS PEQUEÑAS
-   En móvil paso de dos columnas a una sola,
-   y apilo la imagen encima del texto en cada tarjeta */
+/* =============================================
+   RESPONSIVE — Adapta el diseño a móvil/tablet
+   Se activa en pantallas de máximo 768px
+   ============================================= */
 @media (max-width: 768px) {
 
+    /* Una sola columna en lugar de dos */
     main {
         grid-template-columns: 1fr;
         padding: 24px 16px;
     }
 
-    /* La imagen pasa a estar arriba del texto */
+    /* Imagen arriba del texto en cada tarjeta */
     .tarjeta {
         flex-direction: column;
     }
 
-    /* La imagen ocupa todo el ancho con altura fija */
+    /* Imagen ocupa todo el ancho */
     .tarjeta img {
         width: 100%;
         height: 200px;
