@@ -1,5 +1,4 @@
 // PRE-SELECCIÓN DE SERVICIO DESDE URL
-
 const selectServicio = document.getElementById("servicio-reserva");
 const params = new URLSearchParams(window.location.search);
 const servicioParam = params.get("servicio");
@@ -13,8 +12,6 @@ if (servicioParam) {
         }
     }
 }
-
-
 // HORAS DISPONIBLES SEGÚN FECHA
 
 const inputFecha = document.getElementById("fecha");
@@ -48,8 +45,6 @@ inputFecha.addEventListener("change", () => {
         }
     }
 });
-
-
 // MOSTRAR U OCULTAR SELECTOR DE SEDE
 
 const radiosLugar = document.querySelectorAll("input[name='lugar']");
@@ -60,7 +55,6 @@ radiosLugar.forEach(radio => {
         seccionSede.style.display = radio.value === "domicilio" ? "none" : "block";
     });
 });
-
 
 // CONFIRMACIÓN AL ENVIAR
 

@@ -176,6 +176,12 @@ button:hover {
     color: #444;
     line-height: 1.8;
 }
+/* ERROR DE VALIDACIÓN */
+.error-mensaje {
+    color: #dc2626;
+    font-size: 14px;
+    margin-top: 4px;
+}
 
 /* BOTÓN VOLVER */
 .btn-volver-contacto {
