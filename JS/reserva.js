@@ -45,17 +45,6 @@ inputFecha.addEventListener("change", () => {
         }
     }
 });
-// MOSTRAR U OCULTAR SELECTOR DE SEDE
-
-const radiosLugar = document.querySelectorAll("input[name='lugar']");
-const seccionSede = document.getElementById("seccion-sede");
-
-radiosLugar.forEach(radio => {
-    radio.addEventListener("change", () => {
-        seccionSede.style.display = radio.value === "domicilio" ? "none" : "block";
-    });
-});
-
 // CONFIRMACIÓN AL ENVIAR
 
 const formReserva = document.getElementById("form-reserva");
@@ -68,7 +57,6 @@ formReserva.addEventListener("submit", (e) => {
     const servicio = document.getElementById("servicio-reserva").value;
     const fecha    = document.getElementById("fecha").value;
     const hora     = document.getElementById("hora").value;
-    const lugar    = document.querySelector("input[name='lugar']:checked").value;
     const sede     = document.getElementById("sede-reserva").value;
 
     // Validaciones
@@ -76,7 +64,7 @@ formReserva.addEventListener("submit", (e) => {
         alert("Por favor completa todos los campos antes de reservar.");
         return;
     }
-    if (lugar === "sede" && !sede) {
+    if (!sede) {
         alert("Por favor selecciona una sede.");
         return;
     }
@@ -86,14 +74,7 @@ formReserva.addEventListener("submit", (e) => {
 
     formReserva.style.display = "none";
 
-    // Confirmación según tipo de atención
-    if (lugar === "sede") {
-        document.getElementById("detalle-reserva").textContent =
-            `${nombre}, te esperamos el ${fechaLegible} a las ${hora} en ${sede} para tu servicio de ${servicio}.`;
-        document.getElementById("confirmacion-sede").style.display = "flex";
-    } else {
-        document.getElementById("detalle-domicilio").textContent =
-            `${nombre}, recibimos tu solicitud para el ${fechaLegible} a las ${hora} — servicio de ${servicio}.`;
-        document.getElementById("confirmacion-domicilio").style.display = "flex";
-    }
+    document.getElementById("detalle-reserva").textContent =
+        `${nombre}, te esperamos el ${fechaLegible} a las ${hora} en ${sede} para tu servicio de ${servicio}.`;
+    document.getElementById("confirmacion-sede").style.display = "flex";
 });

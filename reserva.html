@@ -20,11 +20,14 @@
         </div>
         <!-- Menú de navegación -->
         <nav aria-label="Navegación principal">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="ubicacion.html">Ubicación</a>
-            <a href="nosotros.html">Nosotros</a>
+            <button class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicacion.html">Ubicación</a>
+                <a href="nosotros.html">Nosotros</a>
+            </div>
         </nav>
     </header>
 
@@ -53,30 +56,14 @@
                 <option value="">Seleccione una hora</option>
             </select>
 
-            <!-- Lugar de atención -->
-            <fieldset style="border:none; padding:0;">
-                <legend>Lugar de atención:</legend>
-                <div class="opciones-lugar">
-                    <label class="opcion-radio">
-                        <input type="radio" name="lugar" value="sede" checked> 🏠 En sede
-                    </label>
-                    <label class="opcion-radio">
-                        <input type="radio" name="lugar" value="domicilio"> 🛵 A domicilio
-                    </label>
-                </div>
-            </fieldset>
-
-            <!-- Selector de sede -->
-            <div id="seccion-sede">
-                <label for="sede-reserva">Sede:</label>
-                <select id="sede-reserva">
-                    <option value="">Seleccione una sede</option>
-                    <option>Sede Chapinero — Calle 72 #10-34</option>
-                    <option>Sede Usaquén — Carrera 15 #93-47</option>
-                    <option>Sede Teusaquillo — Calle 45 #13-22</option>
-                    <option>Sede Santa Fe — Carrera 7 #32-16</option>
-                </select>
-            </div>
+            <label for="sede-reserva">Sede:</label>
+            <select id="sede-reserva" aria-required="true" required>
+                <option value="">Seleccione una sede</option>
+                <option>Sede Chapinero — Calle 72 #10-34</option>
+                <option>Sede Usaquén — Carrera 15 #93-47</option>
+                <option>Sede Teusaquillo — Calle 45 #13-22</option>
+                <option>Sede Santa Fe — Carrera 7 #32-16</option>
+            </select>
 
             <button type="submit">Reservar</button>
         </form>
@@ -89,14 +76,6 @@
             <a href="index.html" class="btn-volver">Volver al inicio</a>
         </div>
 
-        <!-- Confirmación a domicilio -->
-        <div id="confirmacion-domicilio" class="confirmacion-reserva" style="display:none;" role="alert" aria-live="polite">
-            <div class="estrellas" aria-hidden="true">🛵💬🛵</div>
-            <h3>¡Solicitud recibida!</h3>
-            <p id="detalle-domicilio"></p>
-            <p class="nota-whatsapp">Te enviaremos un mensaje por WhatsApp para confirmar los detalles de tu domicilio.</p>
-            <a href="index.html" class="btn-volver">Volver al inicio</a>
-        </div>
     </main>
 
     <!-- Widget de accesibilidad -->
@@ -117,6 +96,7 @@
 
     <script src="JS/reserva.js"></script>
     <script src="JS/accesibilidad.js"></script>
+    <script src="JS/nav.js"></script>
 
 </body>
 </html>
