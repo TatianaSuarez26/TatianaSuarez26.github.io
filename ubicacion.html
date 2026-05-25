@@ -20,11 +20,14 @@
         </div>
         <!-- Menú de navegación -->
         <nav aria-label="Navegación principal">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="ubicacion.html">Ubicación</a>
-            <a href="nosotros.html">Nosotros</a>
+            <button class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicacion.html">Ubicación</a>
+                <a href="nosotros.html">Nosotros</a>
+            </div>
         </nav>
     </header>
 
@@ -43,7 +46,7 @@
                 </iframe>
             </div>
 
-            <!-- Sedes y domicilio -->
+            <!-- Sedes -->
             <div class="info-ubicacion">
                 <h3>Nuestras Sedes</h3>
                 <div class="direccion">
@@ -78,14 +81,6 @@
                     </div>
                 </div>
 
-                <!-- Atención a domicilio -->
-                <div class="domicilio">
-                    <span>🛵</span>
-                    <div>
-                        <p class="nombre-sede">Atención a Domicilio</p>
-                        <p>Llevamos el servicio hasta tu hogar en toda Bogotá. ¡Agenda tu cita y nos encargamos del resto!</p>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
@@ -117,6 +112,7 @@
     </footer>
 
     <script src="JS/accesibilidad.js"></script>
+    <script src="JS/nav.js"></script>
 
 </body>
 </html>
