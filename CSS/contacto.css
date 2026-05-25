@@ -178,9 +178,14 @@ form button:hover {
 }
 /* ERROR DE VALIDACIÓN */
 .error-mensaje {
+    display: none;
     color: #dc2626;
     font-size: 14px;
     margin-top: 4px;
+}
+
+.error-mensaje.visible {
+    display: block;
 }
 
 /* BOTÓN VOLVER */
